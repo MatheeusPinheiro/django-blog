@@ -1,0 +1,21 @@
+<!Doctype html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8"/>
+	<title>Home</title>
+</head>
+
+<body>
+
+	<ul>
+	
+		{% for post in posts %}
+			<a href="{% url 'post_detail' post.id %}">
+				<li>{{post.titulo}} - {{post.autor}}</li>
+			</a>
+		{% endfor %}
+	</ul>
+</body>
+
+</html>

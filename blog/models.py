@@ -9,3 +9,7 @@ class Post(models.Model):
     subtitulo = models.CharField(max_length=255)
     conteudo = models.TextField()
     data_publicacao = models.DateTimeField(default=datetime.now())
+    
+    
+    def __str__(self):
+        return "{} -  {}".format(self.autor, self.titulo)
